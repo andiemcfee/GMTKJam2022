@@ -20,5 +20,7 @@ func _ready():
 func _physics_process(delta: float) -> void:
 	# Runs physics every frame, based on seconds
 	velocity.y += gravity * delta
+	if velocity.y > speed.y: velocity.y = speed.y
+	
 	move_and_slide(velocity)
 	
