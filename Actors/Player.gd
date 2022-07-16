@@ -11,7 +11,9 @@ var motion = Vector2.ZERO
 func _ready():
 	pass # Replace with function body.
 
-
+func _process(delta):
+	if Input.is_action_just_pressed("attack"):
+		.attack()
 
 func _physics_process(delta):
 	var x_input = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left") # get left and right input
